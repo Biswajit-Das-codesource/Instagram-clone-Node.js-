@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="bg-black h-[100vh] w-full overflow-y-scroll">
+<% if (locals.alldata) { %>
+    <% if (alldata=="") { %>
+        <p class="text-white">no post</p>
+    <% } %>
+    <% alldata.forEach(element => { %>
+        <div class="bg-slate-800 h-20 w-1/3 rounded-xl border-neutral-300 border-2 mb-4" >
+            <p class="text-white ml-3"><%= element.title %></p>
+            <p class="text-white p-2"><%= element.para %></p>
+        </div>
+    <% }) %>
+<% } %>
+</div>
+
+
+</body>
+</html>

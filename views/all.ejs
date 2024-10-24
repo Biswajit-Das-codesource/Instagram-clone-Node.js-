@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white">
+    <h1 class="text-4xl">View your own comment</h1>
+    <% if (locals.allcomment) { %> <% allcomment.forEach(element => { %>
+    <div class="h-24 w-1/4 bg-slate-600 rounded-2xl flex justify-center items-center flex-col m-4">
+      <p><%= element.title %><br /></p>
+      <p><%= element.para %><br /></p>
+    </div>
+    <% }) %> <% } %>
+  </body>   
+</html>
